@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>麻家績肉丸｜專為刺蝟打造的全天然無添加鮮食</title>
+  <meta
+    name="description"
+    content="麻家績肉丸專為養刺蝟的人打造，解決刺蝟食物選擇太少的困擾。嚴選原型食材手工製作，全天然無添加主食肉丸、機能副食與安心凍乾。"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <!-- 限時活動橫幅（含時區固定截止時間倒數與優惠碼複製） -->
+  <div id="campaign-banner" class="campaign-banner" role="region" aria-label="限時優惠活動">
+    <div class="container campaign-inner">
+      <div class="campaign-info">
+        <span id="campaign-badge" class="campaign-badge">限時活動</span>
+        <p id="campaign-title" class="campaign-title">載入活動資訊中…</p>
+      </div>
+      <div class="campaign-controls">
+        <div id="campaign-countdown" class="countdown" aria-live="off">
+          <div class="countdown-unit">
+            <span id="cd-days" class="countdown-num">00</span>
+            <span class="countdown-label">天</span>
+          </div>
+          <div class="countdown-unit">
+            <span id="cd-hours" class="countdown-num">00</span>
+            <span class="countdown-label">時</span>
+          </div>
+          <div class="countdown-unit">
+            <span id="cd-minutes" class="countdown-num">00</span>
+            <span class="countdown-label">分</span>
+          </div>
+          <div class="countdown-unit">
+            <span id="cd-seconds" class="countdown-num">00</span>
+            <span class="countdown-label">秒</span>
+          </div>
+        </div>
+        <div class="promo-copy-group">
+          <code id="promo-code-display" class="promo-code">HEDGEHOG90</code>
+          <button
+            type="button"
+            id="copy-promo-btn"
+            class="btn btn-promo"
+            aria-label="複製限時優惠碼"
+          >
+            複製優惠碼
+          </button>
+        </div>
+      </div>
+      <p id="promo-feedback" class="sr-live-feedback" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <!-- 導覽列 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-logo" aria-label="麻家績肉丸 回到頂部">
+        <span class="brand-mark" aria-hidden="true">🦔</span>
+        <span class="brand-text">
+          <strong>麻家績肉丸</strong>
+          <small>刺蝟全天然鮮食專門</small>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="展開或關閉導覽選單"
+      >
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="menu-label">選單</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="主要導覽">
+        <ul class="nav-list">
+          <li><a href="#story" class="nav-link">品牌故事</a></li>
+          <li><a href="#products" class="nav-link">全部商品</a></li>
+          <li><a href="#reviews" class="nav-link">刺友口碑</a></li>
+          <li><a href="#faq" class="nav-link">常見問題</a></li>
+          <li>
+            <a href="#preorder" class="nav-link nav-link-cta">
+              預購清單 <span id="nav-cart-badge" class="cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 首屏 Hero -->
+    <section id="top" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">專為養刺蝟的你而做</p>
+          <h1 class="hero-title">
+            告別只有單一飼料，<br />
+            給刺寶<span class="highlight">全天然無添加</span>的幸福肉丸
+          </h1>
+          <p class="hero-subtitle">
+            市面上專為刺蝟設計的食物總是太少？「麻家績肉丸」嚴選臺灣原型肉類與鮮甜蔬果手工蒸烤，零防腐劑、零誘食劑，讓每隻小刺蝟都能吃得安心又多元。
+          </p>
+          <ul class="hero-pillars" aria-label="核心賣點">
+            <li>100% 原型食材、無鹽無糖</li>
+            <li>專為刺蝟牙口設計 1.2cm 一口大小</li>
+            <li>主食、副食、凍乾多元輪替</li>
+          </ul>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">看商品</a>
+            <a href="#story" class="btn btn-secondary">認識品牌</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <figure class="hero-figure">
+            <img
+              src="images/hero-hedgehog-meatballs.jpg"
+              alt="可愛的非洲迷你刺蝟好奇地望著陶碗裡剛蒸好的天然雞肉南瓜績肉丸"
+              class="hero-img"
+            />
+            <figcaption class="hero-caption">
+              手工小顆粒好咬不黏牙，打開就是純粹肉香（攝影棚實景概念圖）
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 品牌故事 -->
+    <section id="story" class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">BRAND STORY</p>
+          <h2 class="section-title">為什麼會有「麻家績肉丸」？</h2>
+          <p class="section-desc">
+            因為我們也養刺蝟，懂那種站在寵物店貨架前卻找不到幾樣安心食物的無奈。
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <span class="story-step" aria-hidden="true">01</span>
+            <h3>痛點：刺蝟的食物真的太少</h3>
+            <p>
+              走進寵物店，貓狗零食整排滿滿，刺蝟專屬區卻往往只有寥寥兩三款，多數飼主只能長年依賴高油貓狗飼料或單一麵包蟲，想替孩子加菜卻無從選起。
+            </p>
+          </article>
+
+          <article class="story-card">
+            <span class="story-step" aria-hidden="true">02</span>
+            <h3>堅持：全天然無添加才敢餵</h3>
+            <p>
+              刺蝟體型小、代謝敏感，任何防腐劑、澱粉黏著劑、人工色素或過多油脂都是負擔。我們堅持只用看得見的原型肉類與蔬果，靠蒸烤定型與急速凍乾保留營養。
+            </p>
+          </article>
+
+          <article class="story-card">
+            <span class="story-step" aria-hidden="true">03</span>
+            <h3>初心：每一餐都是安心陪伴</h3>
+            <p>
+              從一顆 1.2 公分的雞胸南瓜績肉丸開始，麻家績肉丸希望把「換口味」的樂趣還給刺蝟與飼主，陪著每隻小刺寶健康安穩地度過每個夜晚。
+            </p>
+          </article>
+        </div>
+
+        <div class="sample-stats" aria-label="品牌里程碑（示例數據）">
+          <div class="stat-item">
+            <strong class="stat-num">0%</strong>
+            <span class="stat-label">人工防腐劑與誘食劑添加</span>
+          </div>
+          <div class="stat-item">
+            <strong class="stat-num">1.2 cm</strong>
+            <span class="stat-label">專為刺蝟牙口設計的丸徑</span>
+          </div>
+          <div class="stat-item">
+            <strong class="stat-num">300+ 位</strong>
+            <span class="stat-label">合作試吃刺友回饋（示例數據）</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 商品型錄（分類篩選 + 即時搜尋 + 詳情彈窗 + 加入預購） -->
+    <section id="products" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">NATURAL MENU</p>
+          <h2 class="section-title">麻家績肉丸・全天然商品型錄</h2>
+          <p class="section-desc">
+            以下商品為展示用示例資料，支援分類篩選與即時關鍵字搜尋，歡迎挑選加入預購清單。
+          </p>
+        </div>
+
+        <div class="catalog-toolbar" role="search" aria-label="商品搜尋與分類篩選">
+          <div class="category-filters" role="group" aria-label="依商品分類篩選">
+            <button type="button" class="filter-btn is-active" data-category="全部" aria-pressed="true">
+              全部
+            </button>
+            <button type="button" class="filter-btn" data-category="主食肉丸" aria-pressed="false">
+              主食肉丸
+            </button>
+            <button type="button" class="filter-btn" data-category="機能副食" aria-pressed="false">
+              機能副食
+            </button>
+            <button type="button" class="filter-btn" data-category="點心凍乾" aria-pressed="false">
+              點心凍乾
+            </button>
+          </div>
+
+          <div class="search-box">
+            <label for="product-search" class="sr-only">搜尋商品名稱、成分或介紹</label>
+            <input
+              type="search"
+              id="product-search"
+              class="search-input"
+              placeholder="搜尋食材或商品，例如：南瓜、鮭魚、凍乾…"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <p id="catalog-result-count" class="catalog-result-count" aria-live="polite"></p>
+
+        <div id="product-grid" class="product-grid"></div>
+
+        <div id="empty-catalog-state" class="empty-state" hidden>
+          <p class="empty-state-title">找不到符合條件的商品</p>
+          <p class="empty-state-desc">請試著更換搜尋關鍵字，或切回「全部」分類瀏覽所有天然鮮食。</p>
+          <button type="button" id="reset-filters-btn" class="btn btn-secondary">
+            重設搜尋與分類
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 顧客口碑（從 js/data.js 讀取） -->
+    <section id="reviews" class="section section-accent">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">CUSTOMER REVIEWS</p>
+          <h2 class="section-title">刺友們的真實試吃回饋（示例）</h2>
+          <p class="section-desc">
+            以下顧客評價為示範排版用示例資料，呈現刺寶爸媽常見的餵食經驗。
+          </p>
+        </div>
+
+        <div id="reviews-grid" class="reviews-grid"></div>
+      </div>
+    </section>
+
+    <!-- 常見問題 FAQ（從 js/data.js 讀取，支援鍵盤操作） -->
+    <section id="faq" class="section">
+      <div class="container faq-container">
+        <div class="section-header">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title">常見問題</h2>
+          <p class="section-desc">
+            第一次幫刺寶挑鮮食嗎？整理了 4 個飼主最常問的問題，可使用鍵盤 Tab 與 Enter／空白鍵展開閱讀。
+          </p>
+        </div>
+
+        <div id="faq-list" class="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- 預購清單與明細匯出 -->
+    <section id="preorder" class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">PRE-ORDER LIST</p>
+          <h2 class="section-title">預購清單與訂購明細整理</h2>
+          <p class="section-desc">
+            清單會自動儲存在您的瀏覽器中。整理好品項、優惠碼與暱稱後，一鍵複製或下載文字檔，直接貼給品牌 LINE 或 IG 即可訂購！
+          </p>
+        </div>
+
+        <div class="preorder-layout">
+          <!-- 左側：清單品項與金額試算 -->
+          <div class="preorder-panel">
+            <div class="panel-header">
+              <h3>已選購商品</h3>
+              <button type="button" id="clear-cart-btn" class="btn-text-danger">
+                清空清單
+              </button>
+            </div>
+
+            <div id="cart-items-container" class="cart-items"></div>
+
+            <div id="cart-empty-notice" class="cart-empty-notice">
+              <p>目前預購清單還是空的喔！</p>
+              <a href="#products" class="btn btn-secondary btn-sm">前往挑選績肉丸</a>
+            </div>
+
+            <div class="promo-apply-box">
+              <label for="preorder-promo-input" class="form-label">活動優惠碼（選填）</label>
+              <div class="promo-input-row">
+                <input
+                  type="text"
+                  id="preorder-promo-input"
+                  class="form-input"
+                  placeholder="例如：HEDGEHOG90"
+                  autocomplete="off"
+                />
+                <button type="button" id="apply-promo-btn" class="btn btn-secondary">
+                  套用
+                </button>
+              </div>
+              <p id="promo-apply-status" class="form-hint" aria-live="polite"></p>
+            </div>
+
+            <dl class="price-summary">
+              <div class="price-row">
+                <dt>商品小計</dt>
+                <dd id="summary-subtotal">NT$ 0</dd>
+              </div>
+              <div class="price-row">
+                <dt>優惠折抵</dt>
+                <dd id="summary-discount">- NT$ 0</dd>
+              </div>
+              <div class="price-row price-row-total">
+                <dt>優惠後預估金額</dt>
+                <dd id="summary-total">NT$ 0</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- 右側：聯絡人表單與明細匯出 -->
+          <div class="preorder-panel">
+            <h3>訂購聯絡資訊與明細</h3>
+            <form id="preorder-form" class="preorder-form" novalidate>
+              <div class="form-group">
+                <label for="customer-nickname" class="form-label">
+                  聯絡人暱稱 <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="customer-nickname"
+                  class="form-input"
+                  placeholder="請輸入方便核對的 LINE／IG 暱稱（例：刺刺麻麻小芸）"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="customer-note" class="form-label">備註（刺寶口味偏好、寄送需求等）</label>
+                <textarea
+                  id="customer-note"
+                  class="form-textarea"
+                  rows="3"
+                  placeholder="例如：希望週末到貨、第一次購買想確認保存方式…"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="order-summary-preview" class="form-label">預購明細預覽（可直接貼給品牌 LINE / IG）</label>
+                <textarea
+                  id="order-summary-preview"
+                  class="form-textarea summary-preview"
+                  rows="9"
+                  readonly
+                ></textarea>
+              </div>
+
+              <p id="preorder-error-msg" class="form-error" role="alert" aria-live="assertive" hidden></p>
+              <p id="preorder-success-msg" class="form-success" role="status" aria-live="polite" hidden></p>
+
+              <div class="preorder-actions">
+                <button type="button" id="copy-order-btn" class="btn btn-primary">
+                  複製明細
+                </button>
+                <button type="button" id="download-order-btn" class="btn btn-secondary">
+                  下載 .txt
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 聯絡資訊 -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">CONTACT US</p>
+          <h2 class="section-title">聯絡麻家績肉丸（示例聯絡資訊）</h2>
+          <p class="section-desc">
+            複製預購明細後，歡迎透過以下示範管道私訊我們確認排單與寄送細節。
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>官方 LINE（示例）</h3>
+            <p class="contact-value">@majiagi_hedgehog（示例帳號）</p>
+            <p class="contact-note">貼上預購明細文字後，我們將於每日晚間回覆確認排單。</p>
+          </div>
+          <div class="contact-card">
+            <h3>Instagram（示例）</h3>
+            <p class="contact-value">@majiagi.meatballs（示例帳號）</p>
+            <p class="contact-note">歡迎分享刺寶吃肉丸的可愛照片並標記我們。</p>
+          </div>
+          <div class="contact-card">
+            <h3>手工製作與客服時間（示例）</h3>
+            <p class="contact-value">週一至週五 10:00 – 19:00</p>
+            <p class="contact-note">接單後新鮮手工製作，無門市實體自取（示例說明）。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>麻家績肉丸</strong>
+        <p>專為刺蝟打造的全天然無添加鮮食｜純本地靜態網站，不收集外部金流或個資</p>
+      </div>
+      <div class="footer-meta">
+        <p>© 2026 麻家績肉丸 Majiagi Meatballs（部分數據與聯絡帳號為展示示例）</p>
+        <a href="#top" class="footer-top-link">回到頂部 ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 商品詳情無障礙彈窗 -->
+  <div
+    id="product-modal"
+    class="modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-product-title"
+    hidden
+  >
+    <div class="modal-dialog" role="document">
+      <button
+        type="button"
+        id="modal-close-btn"
+        class="modal-close-btn"
+        aria-label="關閉商品詳情視窗"
+      >
+        ✕
+      </button>
+
+      <div class="modal-body">
+        <div class="modal-media">
+          <img id="modal-product-img" src="" alt="" class="modal-img" />
+        </div>
+        <div class="modal-info">
+          <span id="modal-product-category" class="product-category-tag"></span>
+          <h3 id="modal-product-title" class="modal-title"></h3>
+          <p id="modal-product-price" class="modal-price"></p>
+          <p id="modal-product-unit" class="modal-unit"></p>
+          <p id="modal-product-desc" class="modal-desc"></p>
+
+          <div class="modal-detail-block">
+            <h4>純天然成分</h4>
+            <p id="modal-product-ingredients"></p>
+          </div>
+
+          <div class="modal-detail-block">
+            <h4>建議餵食方式</h4>
+            <p id="modal-product-feeding"></p>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" id="modal-add-cart-btn" class="btn btn-primary">
+              加入預購清單
+            </button>
+            <button type="button" id="modal-close-secondary-btn" class="btn btn-secondary">
+              關閉視窗
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
